@@ -1,0 +1,19 @@
+name: 'Carbon Awareness'
+description: 'This action enables Github workflows to become carbon aware'
+author: 'Henrik Claßen'
+inputs:
+  duration:  # id of input
+    description: 'Estimated duration of the job'
+    required: true
+  deadline:  # id of input
+    description: 'Deadline of the job'
+    required: true
+  depends:  # id of input
+    description: 'List of jobs this job depends on'
+    required: false
+outputs:
+  status: # id of output
+    description: 'Status information about the scheduling of the job'
+runs:
+  using: 'node16'
+  main: 'index.js'
